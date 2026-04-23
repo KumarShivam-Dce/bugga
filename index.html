@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUGGA | Bihar's Ultimate Growth and Guidance Academy</title>
+    <meta name="description" content="BUGGA (Bihar's Ultimate Growth and Guidance Academy) offers premier coaching for JEE and NEET in India. Founded by Bipin Bihari (IIT BHU), we focus on personal mentorship, small batches, and building future rankers.">
+    <meta name="keywords" content="JEE coaching, NEET coaching, IIT preparation, Medical preparation, BUGGA, Bihar's Ultimate Growth and Guidance Academy, Muzaffarpur coaching, Saraiya">
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tawellilwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration & Custom CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#1E3A8A', // Deep Blue
+                            lightBlue: '#3B82F6',
+                            orange: '#F97316', // Action Orange
+                            dark: '#0F172A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E3A8A; 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #F97316; 
+        }
+
+        /* Scroll Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero Pattern Overlay */
+        .hero-pattern {
+            background-color: #1E3A8A;
+            background-image: radial-gradient(#3B82F6 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo with Placeholder -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <!-- LOGO PLACEHOLDER IMAGE -->
+                    <img src="/home/shivam/logo.jpeg" alt="BUGGA Logo" class="h-14 sm:h-16 w-auto mr-3 rounded border border-gray-200 object-contain">
+                    <div class="hidden sm:flex flex-col">
+                        <span class="text-2xl md:text-3xl font-extrabold tracking-tight text-brand-blue leading-none">
+                            BUG<span class="text-brand-orange">GA</span>
+                        </span>
+                        <span class="text-[9px] font-bold text-gray-500 uppercase tracking-widest mt-1">Bihar's Ultimate Growth & Guidance Academy</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-700 hover:text-brand-orange font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-brand-orange font-medium transition-colors">About Founder</a>
+                    <a href="#courses" class="text-gray-700 hover:text-brand-orange font-medium transition-colors">Batches</a>
+                    <a href="#faculty" class="text-gray-700 hover:text-brand-orange font-medium transition-colors">Faculty</a>
+                    <a href="#contact" class="bg-brand-orange text-white px-6 py-2.5 rounded-full font-semibold hover:bg-orange-600 transition-all transform hover:scale-105 shadow-lg">Contact Us</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-blue hover:text-brand-orange focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-orange hover:bg-gray-50">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-orange hover:bg-gray-50">About Founder</a>
+                <a href="#courses" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-orange hover:bg-gray-50">Batches</a>
+                <a href="#faculty" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-orange hover:bg-gray-50">Faculty</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-brand-orange font-bold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-20 min-h-screen flex items-center hero-pattern overflow-hidden">
+        <!-- Abstract glowing orbs -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-lightBlue rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-orange rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="text-center max-w-4xl mx-auto">
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-800/50 text-blue-200 text-sm font-semibold tracking-wider mb-6 border border-blue-500/30 uppercase">
+                    Admissions Open for 2026-27
+                </span>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight">
+                    Your Journey to <br/>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-yellow-400">AIR 1 Starts Here</span>
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl text-blue-100 font-light mb-10 max-w-2xl mx-auto">
+                    We don't sell the past. We build your future. Honest guidance, rigorous preparation, and absolute dedication to your JEE & NEET dreams.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#courses" class="px-8 py-4 bg-brand-orange text-white rounded-full font-bold text-lg hover:bg-orange-600 transition-all transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(249,115,22,0.3)]">
+                        Explore Batches
+                    </a>
+                    <a href="#contact" class="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-brand-blue transition-all transform hover:-translate-y-1">
+                        Book Free Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Wave Curve -->
+        <div class="absolute bottom-0 w-full overflow-hidden leading-none">
+            <svg class="relative block w-full h-[50px] md:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C-5.41,56.15,25.86,28.6,83,21.8,154.21,13.25,236.43,69.58,321.39,56.44Z" fill="#F9FAFB"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Motivation Section (The Core Philosophy) -->
+    <section id="motivation" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto reveal">
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mb-6">
+                    The Next <span class="text-brand-orange">AIR 1</span> Could Be You
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-12">
+                    Many institutes sell you the past. We are here to build your future. Every topper was once a beginner, sitting exactly where you are today. At BUGGA, we don’t rely on a legacy of past results; our entire existence is dedicated to making <strong class="text-brand-blue">you</strong> our first success story.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <!-- Motivation Card 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow reveal">
+                    <div class="w-14 h-14 bg-blue-100 text-brand-blue rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Beginners Welcome</h3>
+                    <p class="text-gray-600">You don't need to be a genius to start. You need discipline, the right mentor, and the willingness to work hard. We provide the rest.</p>
+                </div>
+                <!-- Motivation Card 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow reveal delay-100">
+                    <div class="w-14 h-14 bg-orange-100 text-brand-orange rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">We Build Results</h3>
+                    <p class="text-gray-600">We don't buy ranks or showcase fake claims. We believe in the grind. We are building an ecosystem where ordinary students achieve extraordinary feats.</p>
+                </div>
+                <!-- Motivation Card 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-shadow reveal delay-200">
+                    <div class="w-14 h-14 bg-blue-100 text-brand-blue rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Future Rankers</h3>
+                    <p class="text-gray-600">BUGGA is a workshop for future engineers and doctors. Your fresh start meets our undivided attention. Let's make history together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section & Founder Story -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                
+                <!-- Founder Image Placeholder -->
+                <div class="lg:w-1/2 reveal">
+                    <div class="relative group">
+                        <!-- FOUNDER PLACEHOLDER IMAGE -->
+                        <div class="aspect-square bg-gradient-to-tr from-brand-blue to-blue-200 rounded-3xl overflow-hidden shadow-2xl relative">
+                            <!-- Replace src below with the actual image of Bipin Bihari -->
+                            <img src="/home/shivam/founder.jpeg" alt="Bipin Bihari - Founder" class="w-full h-full object-cover mix-blend-overlay opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                            
+                            <!-- Founder Quote Card -->
+                            <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur p-6 rounded-2xl shadow-lg border-l-4 border-brand-orange hidden sm:block">
+                                <p class="text-base font-semibold text-gray-800 italic">"Real education is about honest mentorship. I left the corporate coaching factories to build a place where every student is seen."</p>
+                                <div class="mt-4">
+                                    <p class="text-lg font-bold text-brand-blue leading-tight">Bipin Bihari</p>
+                                    <p class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Founder & Lead Mentor</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- decorative dots -->
+                        <div class="absolute -z-10 -top-6 -left-6 w-32 h-32 bg-[radial-gradient(#F97316_2px,transparent_2px)] [background-size:16px_16px] opacity-30"></div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 reveal">
+                    <h4 class="text-brand-orange font-bold tracking-wider uppercase mb-2">The BUGGA Story</h4>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">Born from Experience. Built for You.</h2>
+                    
+                    <div class="space-y-6 text-gray-600">
+                        <p class="text-lg">
+                            After spending years teaching at India's top coaching institutes like Motion and Sri Chaitanya, our founder, <strong class="text-brand-blue">Bipin Bihari (IIT BHU)</strong>, realized a harsh truth: the traditional coaching industry has become a factory. Thousands of students are packed into halls, losing their identity and their confidence.
+                        </p>
+                        <p class="text-lg">
+                            <strong class="text-brand-dark">BUGGA (Bihar's Ultimate Growth and Guidance Academy)</strong> was established to break this cycle. We bring the elite pedagogy of Kota and Hyderabad right to Muzaffarpur, ensuring every student gets the premium guidance they deserve.
+                        </p>
+                        
+                        <div class="bg-blue-50 border-l-4 border-brand-blue p-6 rounded-r-lg mt-6">
+                            <h3 class="text-xl font-bold text-brand-dark mb-2"><i class="fas fa-eye text-brand-blue mr-2"></i> Our Vision</h3>
+                            <p>To build an institution where every single student is intellectually challenged and emotionally supported. We aim to nurture the brightest minds into tomorrow's IITians and ethical medical professionals.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-brand-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0ibm9uZSI+PC9yZWN0Pgo8cGF0aCBkPSJNMzAgMEw2MCAzMEwzMCA2MEwwIDMwTDMwIDBaIiBmaWxsPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMDMpIiBzdHJva2U9Im5vbmUiPjwvcGF0aD4KPC9zdmc+')]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Why BUGGA is Different</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">We stripped away the marketing fluff and kept only what actually helps a student crack competitive exams.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature -->
+                <div class="bg-gray-800/50 backdrop-blur border border-gray-700 p-8 rounded-2xl hover:bg-gray-800 transition-colors reveal">
+                    <div class="text-brand-orange text-4xl mb-4"><i class="fas fa-users"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Micro Batches</h3>
+                    <p class="text-gray-400 text-sm">Strictly limited batch sizes. You can't hide in the back row here; we ensure total participation from every student.</p>
+                </div>
+                <!-- Feature -->
+                <div class="bg-gray-800/50 backdrop-blur border border-gray-700 p-8 rounded-2xl hover:bg-gray-800 transition-colors reveal delay-100">
+                    <div class="text-brand-blue text-4xl mb-4"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Personal Attention</h3>
+                    <p class="text-gray-400 text-sm">Our expert teachers track your individual progress, identify weak concepts, and provide customized assignments.</p>
+                </div>
+                <!-- Feature -->
+                <div class="bg-gray-800/50 backdrop-blur border border-gray-700 p-8 rounded-2xl hover:bg-gray-800 transition-colors reveal delay-200">
+                    <div class="text-brand-orange text-4xl mb-4"><i class="fas fa-question-circle"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Infinite Doubt Solving</h3>
+                    <p class="text-gray-400 text-sm">No doubt is too small. Dedicated sessions just to clear your conceptual roadblocks and build absolute clarity.</p>
+                </div>
+                <!-- Feature -->
+                <div class="bg-gray-800/50 backdrop-blur border border-gray-700 p-8 rounded-2xl hover:bg-gray-800 transition-colors reveal delay-300">
+                    <div class="text-brand-blue text-4xl mb-4"><i class="fas fa-brain"></i></div>
+                    <h3 class="text-xl font-bold mb-2">IITian Mentorship</h3>
+                    <p class="text-gray-400 text-sm">Exam prep is 50% knowledge, 50% mindset. Get strategic guidance directly from an IIT BHU alumnus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses / Batches Section -->
+    <section id="courses" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h4 class="text-brand-orange font-bold tracking-wider uppercase mb-2">Admissions Open</h4>
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-dark mb-4">Our Dedicated Batches</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Meticulously crafted programs. Choose the batch that aligns with your current academic goals.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Batch 1: Foundation -->
+                <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 reveal">
+                    <div class="bg-blue-400 h-2"></div>
+                    <div class="p-8">
+                        <span class="bg-blue-100 text-brand-blue text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Class 9 & 10</span>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-4 mb-2">Foundation</h3>
+                        <p class="text-gray-600 mb-6 text-sm">Build an unbreakable core in Math and Science early on to stay miles ahead.</p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-start text-gray-700 text-sm"><i class="fas fa-check text-brand-orange mt-1 mr-2"></i> Board Exam Excellence</li>
+                            <li class="flex items-start text-gray-700 text-sm"><i class="fas fa-check text-brand-orange mt-1 mr-2"></i> Olympiad Preparation</li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 px-4 bg-gray-50 text-brand-blue text-center font-bold rounded-xl border border-gray-200 hover:bg-brand-blue hover:text-white transition-colors">Join Batch</a>
+                    </div>
+                </div>
+
+                <!-- Batch 2: Board Batch -->
+                <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 reveal delay-100">
+                    <div class="bg-yellow-500 h-2"></div>
+                    <div class="p-8">
+                        <span class="bg-yellow-100 text-yellow-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Class 11 & 12</span>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-4 mb-2">Board Batch</h3>
+                        <p class="text-gray-600 mb-6 text-sm">Dedicated purely to achieving maximum percentage in your CBSE/State Board exams.</p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-start text-gray-700 text-sm"><i class="fas fa-check text-brand-orange mt-1 mr-2"></i> Strict NCERT Focus</li>
+                            <li class="flex items-start text-gray-700 text-sm"><i class="fas fa-check text-brand-orange mt-1 mr-2"></i> Answer Writing Practice</li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 px-4 bg-gray-50 text-yellow-700 text-center font-bold rounded-xl border border-gray-200 hover:bg-yellow-500 hover:text-white transition-colors">Join Batch</a>
+                    </div>
+                </div>
+
+                <!-- Batch 3: JEE Freshers -->
+                <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 reveal delay-200 relative">
+                    <div class="absolute top-4 right-4 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded shadow-sm">POPULAR</div>
+                    <div class="bg-brand-orange h-2"></div>
+                    <div class="p-8">
+                        <span class="bg-orange-100 text-brand-orange text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Class 11 & 12</span>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-4 mb-2">JEE Freshers</h3>
+                        <p class="text-gray-600 mb-6 text-sm">The complete 2-year rigorous journey for Engineering entrance exams.</p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-start text-gray-700 text-sm"><i class="fas fa-check text-brand-orange mt-1 mr-2"></i> JEE Main & Advanced</li>
+                            <li class="flex items-start text-gray-700 text-sm"><i class="fas fa-check text-brand-orange mt-1 mr-2"></i> Daily Practice Problems</li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 px-4 bg-brand-orange text-white text-center font-bold rounded-xl shadow-md hover:bg-orange-600 transition-colors">Join Batch</a>
+                    </div>
+                </div>
+
+                <!-- Batch 4: NEET Freshers -->
+                <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 reveal">
+                    <div class="bg-green-500 h-2"></div>
+                    <div class="p-8">
+                        <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Class 11 & 12</span>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-4 mb-2">NEET</h3>
+                        <p class="text-gray-600 mb-6 text-sm">Precision-focused preparation for future doctors with absolute command over Biology.</p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-start text-gray-700 text-sm"><i class="fas fa-check text-brand-orange mt-1 mr-2"></i> NCERT Line-by-Line</li>
+                            <li class="flex items-start text-gray-700 text-sm"><i class="fas fa-check text-brand-orange mt-1 mr-2"></i> Speed & Accuracy Drills</li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 px-4 bg-gray-50 text-green-600 text-center font-bold rounded-xl border border-gray-200 hover:bg-green-500 hover:text-white transition-colors">Join Batch</a>
+                    </div>
+                </div>
+
+                <!-- Batch 5: JEE Dropper -->
+                <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 reveal delay-100">
+                    <div class="bg-purple-600 h-2"></div>
+                    <div class="p-8">
+                        <span class="bg-purple-100 text-purple-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">12th Pass</span>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-4 mb-2">JEE Dropper</h3>
+                        <p class="text-gray-600 mb-6 text-sm">One final, intense push. We strip away the basics and hammer the concepts you struggle with.</p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-start text-gray-700 text-sm"><i class="fas fa-check text-brand-orange mt-1 mr-2"></i> Accelerated Syllabus</li>
+                            <li class="flex items-start text-gray-700 text-sm"><i class="fas fa-check text-brand-orange mt-1 mr-2"></i> Error Analysis</li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 px-4 bg-gray-50 text-purple-600 text-center font-bold rounded-xl border border-gray-200 hover:bg-purple-600 hover:text-white transition-colors">Join Batch</a>
+                    </div>
+                </div>
+
+                <!-- Batch 6: NEET Dropper -->
+                <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 reveal delay-200">
+                    <div class="bg-teal-500 h-2"></div>
+                    <div class="p-8">
+                        <span class="bg-teal-100 text-teal-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">12th Pass</span>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-4 mb-2">NEET Dropper</h3>
+                        <p class="text-gray-600 mb-6 text-sm">Targeted revision and extreme test-taking practice to push your score beyond the cutoff.</p>
+                        <ul class="space-y-2 mb-8">
+                            <li class="flex items-start text-gray-700 text-sm"><i class="fas fa-check text-brand-orange mt-1 mr-2"></i> High-Frequency Topics</li>
+                            <li class="flex items-start text-gray-700 text-sm"><i class="fas fa-check text-brand-orange mt-1 mr-2"></i> Rigorous Mock Tests</li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 px-4 bg-gray-50 text-teal-600 text-center font-bold rounded-xl border border-gray-200 hover:bg-teal-500 hover:text-white transition-colors">Join Batch</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty / Mentorship Section -->
+    <section id="faculty" class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center bg-gray-50 rounded-3xl overflow-hidden border border-gray-100 shadow-sm reveal">
+                
+                <!-- Focus on Bipin Bihari -->
+                <div class="lg:w-2/5 bg-brand-blue p-10 text-white flex flex-col justify-center h-full relative overflow-hidden">
+                    <!-- background styling -->
+                    <div class="absolute -right-10 -top-10 text-9xl text-white opacity-5"><i class="fas fa-graduation-cap"></i></div>
+                    
+                    <h4 class="text-brand-orange font-bold uppercase tracking-wide mb-2">Lead Mentor</h4>
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Bipin Bihari</h2>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-white/20 px-3 py-1 rounded text-xs font-semibold backdrop-blur-sm">IIT BHU Alumnus</span>
+                        <span class="bg-white/20 px-3 py-1 rounded text-xs font-semibold backdrop-blur-sm">Ex-Motion</span>
+                        <span class="bg-white/20 px-3 py-1 rounded text-xs font-semibold backdrop-blur-sm">Ex-Sri Chaitanya</span>
+                    </div>
+                    <p class="text-blue-100 text-sm leading-relaxed mb-6">
+                        "Your rank is not decided on the day of the exam; it is built every single day in the classroom. At BUGGA, I personally oversee the academic progression of our students to ensure nobody falls behind."
+                    </p>
+                    <div>
+                        <a href="#contact" class="inline-block border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-6 py-2 rounded-full font-bold transition-colors text-sm">
+                            Learn from the Best
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Focus on the broader ecosystem -->
+                <div class="lg:w-3/5 p-10 lg:p-14">
+                    <h3 class="text-2xl font-bold text-brand-dark mb-6">Backed by an Elite Ecosystem</h3>
+                    <p class="text-gray-600 mb-10">BUGGA doesn't rely on just one pillar. Bipin Sir has curated a team of highly experienced educators who share his vision of honest, result-driven coaching.</p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-8">
+                        <div>
+                            <div class="w-12 h-12 bg-orange-100 text-brand-orange rounded-xl flex items-center justify-center text-xl mb-4">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">Expert JEE Faculty</h4>
+                            <p class="text-sm text-gray-600">Our engineering prep team consists of alumni from top IITs and NITs, alongside veteran educators from established coaching hubs.</p>
+                        </div>
+                        <div>
+                            <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                                <i class="fas fa-dna"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-800 mb-2">Specialized NEET Panel</h4>
+                            <p class="text-sm text-gray-600">Taught by top medical professionals and dedicated Botany/Zoology experts who know exactly how to decode the NCERT pattern.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials (Honest early feedback) -->
+    <section class="py-24 bg-brand-blue relative overflow-hidden">
+        <!-- Abstract background elements -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-brand-orange opacity-10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Words from our Students</h2>
+                <p class="text-blue-200 max-w-2xl mx-auto">We don't claim fake ranks. We showcase real satisfaction and growth from the students who trust us today.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 reveal">
+                    <div class="text-brand-orange text-3xl mb-4"><i class="fas fa-quote-left"></i></div>
+                    <p class="text-blue-50 mb-6 italic text-sm leading-relaxed">
+                        "I shifted from a big brand institute to BUGGA because there I was just part of a crowd. Here, Bipin Sir actually knows my weak areas and helps me fix them."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-brand-orange rounded-full flex items-center justify-center text-white font-bold mr-3">A</div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Aryan K.</h4>
+                            <p class="text-blue-200 text-xs">JEE Batch</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 reveal delay-100">
+                    <div class="text-brand-orange text-3xl mb-4"><i class="fas fa-quote-left"></i></div>
+                    <p class="text-blue-50 mb-6 italic text-sm leading-relaxed">
+                        "The doubt solving sessions are a lifesaver. I never feel embarrassed to ask basic questions. The biology faculty is phenomenal for my NEET prep."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mr-3">S</div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Sneha P.</h4>
+                            <p class="text-blue-200 text-xs">NEET Dropper</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 reveal delay-200">
+                    <div class="text-brand-orange text-3xl mb-4"><i class="fas fa-quote-left"></i></div>
+                    <p class="text-blue-50 mb-6 italic text-sm leading-relaxed">
+                        "They focus heavily on building the base. The regular tests are tough, but the post-test analysis given by the teachers is where the real learning happens."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold mr-3">R</div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Rohan M.</h4>
+                            <p class="text-blue-200 text-xs">Board + Foundation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Lead Gen Section -->
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden reveal">
+                <div class="flex flex-col lg:flex-row">
+                    
+                    <!-- Contact Form -->
+                    <div class="lg:w-1/2 p-8 md:p-12 lg:p-16">
+                        <h2 class="text-3xl font-bold text-brand-dark mb-2">Take the First Step</h2>
+                        <p class="text-gray-600 mb-8">Fill the form to book a free counseling session or demo class.</p>
+                        
+                        <form action="https://formspree.io/f/xqewgjlz" method="POST" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Student Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all" placeholder="Enter full name">
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all" placeholder="10-digit number">
+                                </div>
+                                <div>
+                                    <label for="batch" class="block text-sm font-medium text-gray-700 mb-1">Interested Batch</label>
+                                    <select id="batch" name="batch" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none transition-all bg-white">
+                                        <option value="" disabled selected>Select Batch</option>
+                                        <option value="foundation">Foundation (9th/10th)</option>
+                                        <option value="board">Board Batch</option>
+                                        <option value="jee_freshers">JEE Freshers</option>
+                                        <option value="jee_dropper">JEE Dropper</option>
+                                        <option value="neet">NEET</option>
+                                        <option value="neet_dropper">NEET Dropper</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-blue text-white font-bold py-4 rounded-xl hover:bg-blue-800 transition-colors shadow-lg shadow-blue-900/20 mt-4">
+                                Request Call Back
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info & Map -->
+                    <div class="lg:w-1/2 bg-brand-dark text-white p-8 md:p-12 lg:p-16 relative overflow-hidden">
+                        <!-- BG pattern -->
+                        <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEiPjwvcGF0aD4KPC9zdmc+')]"></div>
+                        
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold mb-8">Reach Out to Us</h3>
+                            
+                            <div class="space-y-6 mb-10">
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-brand-orange shrink-0 mr-4">
+                                        <i class="fas fa-map-marker-alt text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-200">Campus Address</h4>
+                                        <p class="text-gray-400 text-sm mt-1">Ranjit Ray Market,<br>Behind Petrol Pump Saraiya,<br>Muzaffarpur, Bihar, India</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-brand-orange shrink-0 mr-4">
+                                        <i class="fas fa-phone-alt text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-200">Call/WhatsApp</h4>
+                                        <p class="text-gray-400 text-sm mt-1">+91 6206003963</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-brand-orange shrink-0 mr-4">
+                                        <i class="fas fa-envelope text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-200">Email Us</h4>
+                                        <p class="text-gray-400 text-sm mt-1">buggajee.08@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Map Embed (Saraiya, Muzaffarpur) -->
+                            <div class="w-full h-48 rounded-xl overflow-hidden border border-gray-700">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114515.60222017362!2d85.11065691079361!3d26.0827252877546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed4f6055d2ff9f%3A0xc3dfcd874135e5d1!2sSaraiya%2C%20Bihar!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <img src="/home/shivam/logo.jpeg" alt="BUGGA Logo" class="h-12 w-auto mr-2 rounded opacity-90 object-contain">
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Bihar's Ultimate Growth and Guidance Academy. A new generation coaching institute committed to building genuine success stories in JEE and NEET through personal mentorship by top educators.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/profile.php?id=61575407895239" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-orange hover:text-white transition-colors"><i class="fab fa-facebook-f text-sm"></i></a>
+                        <a href="https://www.instagram.com/bugga_jee" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-orange hover:text-white transition-colors"><i class="fab fa-instagram text-sm"></i></a>
+                        <a href="https://www.youtube.com/@Bugga_jee" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-orange hover:text-white transition-colors"><i class="fab fa-youtube text-sm"></i></a>
+                        <a href="https://www.linkedin.com/in/bugga-jee-724a183bb/" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-orange hover:text-white transition-colors"><i class="fab fa-linkedin text-sm"></i></a>
+                        <a href="https://x.com/bugga_jee" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-orange hover:text-white transition-colors"><i class="fab fa-twitter text-sm"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-brand-orange transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-brand-orange transition-colors">About Us</a></li>
+                        <li><a href="#faculty" class="hover:text-brand-orange transition-colors">Faculty</a></li>
+                        <li><a href="#contact" class="hover:text-brand-orange transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Batches</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#courses" class="hover:text-brand-orange transition-colors">JEE Freshers / Droppers</a></li>
+                        <li><a href="#courses" class="hover:text-brand-orange transition-colors">NEET Freshers / Droppers</a></li>
+                        <li><a href="#courses" class="hover:text-brand-orange transition-colors">Foundation (9-10)</a></li>
+                        <li><a href="#courses" class="hover:text-brand-orange transition-colors">Board Batch</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-brand-orange transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-orange transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-brand-orange transition-colors">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 BUGGA, Muzaffarpur. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Designed for Future Rankers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/916206003963?text=Hello%20BUGGA!%20I%20would%20like%20to%20know%20more%20about%20your%20batches." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center text-3xl shadow-lg hover:bg-green-600 transition-all transform hover:scale-110 z-50 animate-bounce" style="animation-duration: 2s;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-lg', 'py-0');
+            } else {
+                navbar.classList.remove('shadow-lg', 'py-0');
+            }
+        });
+
+        // Scroll Reveal Animation (Intersection Observer)
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        };
+
+        const revealOptions = {
+            threshold: 0.15, // Trigger when 15% of element is visible
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
+
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+    </script>
+</body>
+</html>
